@@ -48,13 +48,6 @@ resource "aws_lb" "my_lb" {
   subnets            = [aws_subnet.public_subnet_1.id, aws_subnet.public_subnet_2.id]
 }
 
-resource "aws_lb_target_group" "my_target_group" {
-  name     = "my-target-group"
-  port     = var.container_port
-  protocol = "HTTP"
-  vpc_id   = aws_vpc.my_vpc.id
-}
-
 resource "aws_ecs_cluster" "my_cluster" {
   name = var.ecs_cluster_name
 }
@@ -108,7 +101,7 @@ resource "aws_ecs_service" "my_service" {
   }
 
   load_balancer {
-    target_group_arn = aws_lb_target_group.my_target_group.arn
+    target_group_arn = "<EXISTING_TARGET_GROUP_ARN>" # Reemplaza con el ARN de tu grupo de destino existente
     container_name   = "my-container"
     container_port   = var.container_port
   }
