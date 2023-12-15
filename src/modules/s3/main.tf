@@ -179,8 +179,8 @@ resource "aws_s3_bucket" "harlen-bucket" {
 resource "aws_s3_bucket_object" "harlen-bucket-obj" {
   bucket = aws_s3_bucket.harlen-bucket.id
   key    = "index.html"
-  source = "${path.module}/web-component/${each.value}"
-  etag = filemd5("${path.module}/web-component/${each.value}") 
+  source = "${path.module}/web-component/index.html"
+  etag = filemd5("${path.module}/web-component/index.html") 
   content_type = "text/html"
 }
 
