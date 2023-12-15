@@ -7,5 +7,5 @@ variable "aws_region" {
 variable "bucket_name" {
     description = "Name of the bucket"
     type = string
-    default = "cp-web-hosting-bucket"
+    default = "cp-web-hosting-bucket-prueba"
 }
