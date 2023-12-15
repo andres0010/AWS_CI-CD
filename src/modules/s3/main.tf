@@ -180,7 +180,7 @@ resource "aws_s3_bucket_object" "harlen-bucket-obj" {
   bucket = aws_s3_bucket.harlen-bucket.id
   key    = "index.html"
   source = "./web-component/index.html"
-  etag   = filemd5("./src/modules/s3/web-component/index.html")
+  /*etag   = filemd5("./src/modules/s3/web-component/index.html")*/
   content_type = "text/html"
 }
 
