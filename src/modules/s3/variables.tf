@@ -19,5 +19,5 @@ variable "public_subnet_cidrs" {
 variable "azs" {
   type        = list(string)
   description = "Availability Zones"
-  default     = ["us-west-1a", "us-west-1b"]
+  default     = ["us-west-1a", "us-west-1c"]
 }
