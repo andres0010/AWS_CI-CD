@@ -4,6 +4,7 @@ module "template_files" {
     base_dir = "${path.module}/web"
 }
 
+
 provider "aws" {
     region = var.aws_region
 }
